@@ -21,7 +21,7 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",  // Enables static export for GitHub Pages
-  basePath: "/amazon", // Replace with your GitHub repository name
+  // basePath: "/amazon", // Replace with your GitHub repository name
 };
 
 module.exports = nextConfig;
