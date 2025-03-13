@@ -2,7 +2,7 @@ import sqlite3 from "sqlite3";
 import { open } from "sqlite";
 import path from "path";
 
-export async function GET(req) {
+export async function GET(req:any) {
   try {
     // Extract query parameters manually
     const url = new URL(req.url, "http://localhost"); // Base URL required for parsing
@@ -51,7 +51,7 @@ export async function GET(req) {
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
-  } catch (error) {
+  } catch (error:any) {
     console.error("Database error:", error);
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500,
