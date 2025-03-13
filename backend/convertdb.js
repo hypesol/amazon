@@ -12,6 +12,7 @@ const dbFilePath = "../public/data/products.db";
 // ✅ Fields to keep in the database
 const selectedFields = [
     "merchant_name",
+    "product_name",
     "tracking_url",
     "thumbnail_url",
     "image_url",

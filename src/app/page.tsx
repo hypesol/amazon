@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import SectionHowItWork from "@/components/SectionHowItWork/SectionHowItWork";
 import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
 import SectionPromo1 from "@/components/SectionPromo1";
@@ -17,7 +18,34 @@ import { PRODUCTS, SPORT_PRODUCTS } from "@/data/data";
 import SectionGridFeatureItems from "@/components/SectionGridFeatureItems";
 import SectionMagazine5 from "@/app/blog/SectionMagazine5";
 
+
+
 function PageHome() {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("/api/products?dbType=products&type=random"); // Fetch from API
+
+        const result = await response.json();
+
+        if (result.success) {
+          console.log("Fetched Products:", result.data); // Debugging
+          setProducts(result.data);
+        } else {
+          console.error("Failed to fetch products:", result.error);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  
   return (
     <div className="nc-PageHome relative overflow-hidden">
       <SectionHero2 />
@@ -41,8 +69,8 @@ function PageHome() {
           <SectionHowItWork />
         </div> */}
         {/* <SectionPromo1 /> */}
-        <SectionGridFeatureItems />
-        
+        <SectionGridFeatureItems data={products}  />
+
         <div className="relative py-24 lg:py-32">
           <BackgroundSection />
           <SectionGridMoreExplore />
@@ -60,8 +88,6 @@ function PageHome() {
         {/* <SectionSliderCategories /> */}
 
         {/* <SectionPromo3 /> */}
-
-        {/* <SectionGridFeatureItems /> */}
 
         {/* <div className="relative py-24 lg:py-32">
           <BackgroundSection />
