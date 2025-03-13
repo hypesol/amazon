@@ -1,7 +1,7 @@
 [
   {
     "Merchant": "DYU",
-    "End Date": "2034-09-30 00:00:00.0",
+    "End Date": "2034-09-30",
     "Title": "DYUSAS(eu)",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1089549&m=117484&u=233101",
     "Category": "",
@@ -10,7 +10,7 @@
   },
   {
     "Merchant": "DYU",
-    "End Date": "2029-06-30 00:00:00.0",
+    "End Date": "2029-06-30",
     "Title": "DYUSAS(us)",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1111020&m=117484&u=233101",
     "Category": "",
@@ -19,7 +19,7 @@
   },
   {
     "Merchant": "DYU",
-    "End Date": "2029-05-31 00:00:00.0",
+    "End Date": "2029-05-31",
     "Title": "DYU6",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1102154&m=117484&u=233101",
     "Category": "",
@@ -28,7 +28,7 @@
   },
   {
     "Merchant": "DYU",
-    "End Date": "2029-04-30 00:00:00.0",
+    "End Date": "2029-04-30",
     "Title": "DYU30",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1102151&m=117484&u=233101",
     "Category": "",
@@ -37,7 +37,7 @@
   },
   {
     "Merchant": "DYU",
-    "End Date": "2029-11-30 00:00:00.0",
+    "End Date": "2029-11-30",
     "Title": "DYU50",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1086911&m=117484&u=233101",
     "Category": "",

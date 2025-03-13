@@ -7,16 +7,14 @@ const path = require("path");
 const csvDirectory = "./csv/products";
 
 // Path to the SQLite database file
-// const dbFilePath = "./db/mydbsel.db";
 const dbFilePath = "../public/data/products.db";
 
 // ✅ Fields to keep in the database
 const selectedFields = [
-    "merchant_id",
     "merchant_name",
     "tracking_url",
-    "image_url",
     "thumbnail_url",
+    "image_url",
     "price",
     "product_category",
     "product_subcategory",
@@ -30,8 +28,8 @@ const selectedFields = [
     "merchant_id",
     "merchant_name",
     "tracking_url",
-    "image_url",
     "thumbnail_url",
+    "image_url",
     "price",
     "retail_price",
     "primary_category",
@@ -110,6 +108,11 @@ const selectedFields = [
               return obj;
             }, {});
   
+              // ✅ Replace "YOURUSERID" in tracking_url
+            if (filteredRow.tracking_url) {
+              filteredRow.tracking_url = filteredRow.tracking_url.replace("YOURUSERID", "233101");
+            }
+
             // Insert filtered data into the database
             const values = selectedFields.map((h) => filteredRow[h]);
             db.run(

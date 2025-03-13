@@ -1,7 +1,7 @@
 [
   {
     "Merchant": "FYTOO",
-    "End Date": "2030-11-01 00:00:00.0",
+    "End Date": "2030-11-01",
     "Title": "$80-$10",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1236154&m=124813&u=233101",
     "Category": "",
@@ -10,7 +10,7 @@
   },
   {
     "Merchant": "FYTOO",
-    "End Date": "2030-11-01 00:00:00.0",
+    "End Date": "2030-11-01",
     "Title": "10% OFF",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1057849&m=124813&u=233101",
     "Category": "",
@@ -19,7 +19,7 @@
   },
   {
     "Merchant": "FYTOO",
-    "End Date": "2030-11-01 00:00:00.0",
+    "End Date": "2030-11-01",
     "Title": "$60-$5",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1057847&m=124813&u=233101",
     "Category": "",
@@ -28,7 +28,7 @@
   },
   {
     "Merchant": "FYTOO",
-    "End Date": "2030-11-01 00:00:00.0",
+    "End Date": "2030-11-01",
     "Title": "$50-$6",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1057846&m=124813&u=233101",
     "Category": "",
@@ -37,7 +37,7 @@
   },
   {
     "Merchant": "FYTOO",
-    "End Date": "2030-01-01 00:00:00.0",
+    "End Date": "2030-01-01",
     "Title": "$120-$15",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1057841&m=124813&u=233101",
     "Category": "",
@@ -46,7 +46,7 @@
   },
   {
     "Merchant": "FYTOO",
-    "End Date": "2030-01-01 00:00:00.0",
+    "End Date": "2030-01-01",
     "Title": "$180-$25",
     "Tracking URL": "https://www.shareasale.com/u.cfm?d=1057840&m=124813&u=233101",
     "Category": "",
