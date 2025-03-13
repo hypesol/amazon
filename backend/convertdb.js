@@ -7,7 +7,8 @@ const path = require("path");
 const csvDirectory = "./csv/products";
 
 // Path to the SQLite database file
-const dbFilePath = "./db/mydbsel.db";
+// const dbFilePath = "./db/mydbsel.db";
+const dbFilePath = "../public/data/products.db";
 
 // ✅ Fields to keep in the database
 const selectedFields = [

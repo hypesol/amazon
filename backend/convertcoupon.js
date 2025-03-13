@@ -3,7 +3,7 @@ const path = require("path");
 const csv = require("csv-parser");
 
 const inputFile = "csv/a-233101.CSV"; // Update this with your actual CSV filename
-const outputDir = "output_json";
+const outputDir = "../public/data/coupons";
 
 // Ensure output directory exists
 if (!fs.existsSync(outputDir)) {
