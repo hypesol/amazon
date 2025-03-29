@@ -1,0 +1,29 @@
+[
+  {
+    "Merchant": "ScentDecant_com",
+    "End Date": "2030-12-31",
+    "Title": "15% Off",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=937406&m=128780&u=233101",
+    "Category": "beauty fragrance perfume",
+    "Description": "Get 15% Off Any Purchase",
+    "Coupon Code": "THANKS15"
+  },
+  {
+    "Merchant": "ScentDecant_com",
+    "End Date": "2030-12-31",
+    "Title": "15% Off",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=937404&m=128780&u=233101",
+    "Category": "beauty fragrance perfume",
+    "Description": "Get 15% Off Any Purchase",
+    "Coupon Code": "SCENT15"
+  },
+  {
+    "Merchant": "ScentDecant_com",
+    "End Date": "2030-12-31",
+    "Title": "Free US Shipping Over $25",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=937405&m=128780&u=233101",
+    "Category": "beauty fragrance perfume",
+    "Description": "Get Free US Shipping When Spending $25",
+    "Coupon Code": "FREESHIP25"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "Merchant": "BABEYOND",
+    "End Date": "2025-03-10",
+    "Title": "St. Patrick's Day Pre-Sale",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=1272285&m=130076&u=233101",
+    "Category": "",
+    "Description": "woman, fashion, vintage, dress, sale",
+    "Coupon Code": "Party15"
+  },
+  {
+    "Merchant": "BABEYOND",
+    "End Date": "2025-03-10",
+    "Title": "Women's Day Sale",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=1271435&m=130076&u=233101",
+    "Category": "Womens Day",
+    "Description": "woman, fashion, vintage, dress, sale",
+    "Coupon Code": "WD20"
+  },
+  {
+    "Merchant": "BABEYOND",
+    "End Date": "2025-03-10",
+    "Title": "Women's Day Sale",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=1271434&m=130076&u=233101",
+    "Category": "Womens Day",
+    "Description": "woman, fashion, vintage, dress, sale",
+    "Coupon Code": "WD15"
+  },
+  {
+    "Merchant": "BABEYOND",
+    "End Date": "2025-12-31",
+    "Title": "CLEARANCE SALE",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=1268466&m=130076&u=233101",
+    "Category": "sale",
+    "Description": "",
+    "Coupon Code": "CS25"
+  },
+  {
+    "Merchant": "BABEYOND",
+    "End Date": "2025-12-31",
+    "Title": "CLEARANCE SALE",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=1268465&m=130076&u=233101",
+    "Category": "sale",
+    "Description": "",
+    "Coupon Code": "CS15"
+  },
+  {
+    "Merchant": "BABEYOND",
+    "End Date": "NEVER",
+    "Title": "SAS15",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=939174&m=130076&u=233101",
+    "Category": "WomenClothing",
+    "Description": "Save $15 off on order over $150",
+    "Coupon Code": "SAS15"
+  },
+  {
+    "Merchant": "BABEYOND",
+    "End Date": "NEVER",
+    "Title": "SAS5",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=938840&m=130076&u=233101",
+    "Category": "WomenClothing",
+    "Description": "Save $5 off on order over $50",
+    "Coupon Code": "SAS5"
+  },
+  {
+    "Merchant": "BABEYOND",
+    "End Date": "NEVER",
+    "Title": "SAS10",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=939172&m=130076&u=233101",
+    "Category": "WomenClothing",
+    "Description": "Save $10 off on order over $100",
+    "Coupon Code": "SAS10"
+  }
+]
