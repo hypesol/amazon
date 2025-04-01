@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export", // Ensures static export
-  basePath:  "/amazon", // Adjust basePath for GitHub Pages
-  assetPrefix:  "/amazon/", // Adjust assetPrefix for GitHub Pages
+  // basePath:  "/amazon", // Adjust basePath for GitHub Pages
+  // assetPrefix:  "/amazon/", // Adjust assetPrefix for GitHub Pages
   images: {
     unoptimized: true, // Ensures compatibility with static export
   },
