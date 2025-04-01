@@ -13,7 +13,7 @@ export interface SectionGridMoreExploreProps {
   className?: string;
   gridClassName?: string;
   boxCard?: "box1" | "box4" | "box6";
-  data?: ExploreType[];
+  data?: [];
 }
 
 const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({

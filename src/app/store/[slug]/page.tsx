@@ -5,7 +5,7 @@ import SectionGridMoreExplore from "@/components/SectionGridMoreExplore/SectionG
 
 // Generate static paths for stores (Required for `output: export`)
 export async function generateStaticParams() {
-  const slugs = ["amazon", "ebay", "tomtop"]; // Replace with actual store slugs
+  const slugs = ["amazon", "banggood", "tomtop"]; // Replace with actual store slugs
   return slugs.map((slug) => ({ slug }));
 }
 
