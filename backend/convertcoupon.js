@@ -37,19 +37,26 @@ db.serialize(() => {
 const cleanMerchantName = (merchant) => {
   if (!merchant) return "Unknown";
 
+  // merchant = merchant.trim();
+  merchant = merchant.trim().replace(/\s+/g, " "); // Normalize spacing
+
   // Define custom mappings (add more as needed)
   const customMappings = {
     "ZAFUL_(HONG_KONG)_LIMITED_": "ZAFUL",
     "Vicky_and_Lucas_": "Vicky",
-    "https:/www.cesdeals.com": "CESDEALS",
-    "7OR9_TECHNOLOGY_HK_LIMITED":"7OR9_TECHNOLOGY",
+    "https://www.cesdeals.com/": "CESDEALS",
+    "7OR9 TECHNOLOGY (HK) LIMITED": "7OR9_TECHNOLOGY",
+    "ABBE Glasses Co. Ltd.": "ABBE Glasses",
+    "Aiper Official Site": "Aiper",
   };
 
   // Apply custom mapping if exists
   merchant = customMappings[merchant] || merchant;
 
   // Remove invalid characters for filenames
-  return merchant.replace(/[^a-zA-Z0-9\s]/g, " ").trim().replace(/\s+/g, "_");
+  // return merchant.replace(/[^a-zA-Z0-9\s]/g, " ").trim().replace(/\s+/g, "_");
+  return merchant;
+
 };
 
 const merchants = {};
@@ -105,11 +112,23 @@ fs.createReadStream(inputFile)
         );
       })
   .on("end", () => {
+
+        // ✅ Remove old JSON files in the output directory before generating new ones
+        fs.readdirSync(outputDir).forEach((file) => {
+          const filePath = path.join(outputDir, file);
+          if (file.endsWith(".json")) {
+              fs.unlinkSync(filePath);
+          }
+      });
+      console.log("Old JSON files removed.");
+
     // Write JSON files for each merchant
     Object.entries(merchants).forEach(([merchant, deals]) => {
-      const filename = path.join(outputDir, `${merchant}.json`);
-      fs.writeFileSync(filename, JSON.stringify(deals, null, 2), "utf-8");
-      console.log(`Created JSON: ${filename}`);
+      let fileName = merchant.toLowerCase().replace(/[^a-zA-Z0-9\s]/g, " ").trim().replace(/\s+/g, "_");  
+      fileName = path.join(outputDir, `${fileName}.json`);
+    
+      fs.writeFileSync(fileName, JSON.stringify(deals, null, 2), "utf-8");
+      console.log(`Created JSON: ${fileName}`);
     });
 
     // ✅ Write master JSON file containing all data
