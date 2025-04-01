@@ -20,11 +20,21 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
   className = "",
   boxCard = "box4",
   gridClassName = "grid-cols-1 md:grid-cols-2 xl:grid-cols-3",
-  data = DEMO_MORE_EXPLORE_DATA.filter((_, i) => i < 6),
+  data = [],
 }) => {
   const [tabActive, setTabActive] = useState("Man");
 
-  const renderCard = (item: ExploreType) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6; // Change as needed
+
+  // Calculate the paginated data
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedData = data.slice(startIndex, startIndex + itemsPerPage);
+
+
+  const renderCard = (item: any, index:any) => {
+    console.log("Item", item.Title, boxCard)
     switch (boxCard) {
       case "box1":
         return (
@@ -33,13 +43,19 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
 
       case "box4":
         return (
-          <CardCategory4
-            bgSVG={item.svgBg}
-            featuredImage={item.image}
-            key={item.id}
-            color={item.color}
-            {...item}
-          />
+     
+        <CardCategory4
+        count={index + 1}
+        key={index}
+        name={item.Merchant}
+        title={item.Title}
+        desc={item.Description}
+        url={item['Tracking URL']}
+        date={item['End Date']}
+        catg={item.Category}
+        code={item['Coupon Code']}
+          {...item}
+        />
         );
       case "box6":
         return (
@@ -54,15 +70,34 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
 
       default:
         return (
-          <CardCategory4
-            bgSVG={item.svgBg}
-            featuredImage={item.image}
-            key={item.id}
-            color={item.color}
-            {...item}
-          />
+          <div key={index}>
+            <h3>{item.Title}</h3>
+        </div>
         );
     }
+  };
+
+   // Pagination Controls
+   const renderPagination = () => {
+    return (
+      <div className="flex justify-center mt-6 space-x-2">
+        <button
+          className={`px-4 py-2 rounded ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "bg-gray-800 text-white"}`}
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage((prev) => prev - 1)}
+        >
+          Prev
+        </button>
+        <span className="px-4 py-2">{`Page ${currentPage} of ${totalPages}`}</span>
+        <button
+          className={`px-4 py-2 rounded ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "bg-gray-800 text-white"}`}
+          disabled={currentPage === totalPages}
+          onClick={() => setCurrentPage((prev) => prev + 1)}
+        >
+          Next
+        </button>
+      </div>
+    );
   };
 
   const renderHeading = () => {
@@ -161,8 +196,10 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
     <div className={`nc-SectionGridMoreExplore relative ${className}`}>
       {renderHeading()}
       <div className={`grid gap-4 md:gap-7 ${gridClassName}`}>
-        {data.map((item) => renderCard(item))}
+        {paginatedData.map((item, index) => renderCard(item, index))}
       </div>
+      {renderPagination()}
+
     </div>
   );
 };
