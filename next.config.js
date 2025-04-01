@@ -1,15 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Ensures static export
-  // basePath:  "/amazon", // Adjust basePath for GitHub Pages
-  // assetPrefix:  "/amazon/", // Adjust assetPrefix for GitHub Pages
+  output: "export",
+  basePath: "/amazon", // Adjust for GitHub Pages
+  assetPrefix: "/amazon/", // Ensure assets load correctly
   images: {
-    unoptimized: true, // Ensures compatibility with static export
+    unoptimized: true, // Required for static export
   },
 };
 
 module.exports = nextConfig;
-
-
-// basePath: process.env.GITHUB_PAGES ? "/amazon" : "", // Adjust basePath for GitHub Pages
-  // assetPrefix: process.env.GITHUB_PAGES ? "/amazon/" : "", // Adjust assetPrefix for GitHub Pages
