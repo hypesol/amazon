@@ -24,7 +24,7 @@ function PageHome() {
       <div className="container relative space-y-24 my-24 lg:space-y-32 lg:my-32">
         <div className="relative py-24 lg:py-32">
           <BackgroundSection />
-          <SectionGridMoreExplore data={coupons} />
+          {/* <SectionGridMoreExplore data={coupons} /> */}
         </div>
       </div>
     </div>
