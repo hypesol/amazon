@@ -52,6 +52,8 @@ const cleanMerchantName = (merchant) => {
 };
 
 const merchants = {};
+const masterData = []; // ✅ Collect all data in a single array
+
 
 fs.createReadStream(inputFile)
   .pipe(csv())
@@ -71,6 +73,9 @@ fs.createReadStream(inputFile)
       Description: row["Description"],
       "Coupon Code": row["Coupon Code"],
     };
+
+    // ✅ Store in master data array
+    masterData.push(filteredData);
 
     // Group data by Merchant
     if (!merchants[merchant]) {
@@ -105,6 +110,11 @@ fs.createReadStream(inputFile)
       fs.writeFileSync(filename, JSON.stringify(deals, null, 2), "utf-8");
       console.log(`Created JSON: ${filename}`);
     });
+
+    // ✅ Write master JSON file containing all data
+    const allDataFile = path.join(outputDir, "all_coupons.json");
+    fs.writeFileSync(allDataFile, JSON.stringify(masterData, null, 2), "utf-8");
+    console.log(`Created master JSON: ${allDataFile}`);
 
     console.log("CSV processing complete!");
   })
