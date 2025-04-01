@@ -42,6 +42,7 @@ const cleanMerchantName = (merchant) => {
     "ZAFUL_(HONG_KONG)_LIMITED_": "ZAFUL",
     "Vicky_and_Lucas_": "Vicky",
     "https:/www.cesdeals.com": "CESDEALS",
+    "7OR9_TECHNOLOGY_HK_LIMITED":"7OR9_TECHNOLOGY",
   };
 
   // Apply custom mapping if exists

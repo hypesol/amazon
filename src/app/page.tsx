@@ -64,7 +64,7 @@ function PageHome() {
 
   return (
     <div className="nc-PageHome relative overflow-hidden">
-       {/* <SectionHero2 /> */}
+       <SectionHero2 />
 
       {/* <div className="mt-24 lg:mt-32">
         <DiscoverMoreSlider />
