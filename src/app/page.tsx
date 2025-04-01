@@ -9,7 +9,7 @@ function PageHome() {
 
   useEffect(() => {
     const baseUrl = "https://hypesol.github.io/amazon"; // Ensure correct path
-    fetch(`${baseUrl}/data/coupons/tomtop.json`)
+    fetch(`${baseUrl}/data/coupons/all_coupons.json`)
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch data");
         return response.json();
