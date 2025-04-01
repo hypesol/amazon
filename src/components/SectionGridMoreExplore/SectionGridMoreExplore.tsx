@@ -34,7 +34,7 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
 
 
   const renderCard = (item: any, index:any) => {
-    console.log("Item", item.Title, boxCard)
+    // console.log("Item", item.Title, boxCard)
     switch (boxCard) {
       case "box1":
         return (
@@ -194,7 +194,7 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
 
   return (
     <div className={`nc-SectionGridMoreExplore relative ${className}`}>
-      {renderHeading()}
+      {/* {renderHeading()} */}
       <div className={`grid gap-4 md:gap-7 ${gridClassName}`}>
         {paginatedData.map((item, index) => renderCard(item, index))}
       </div>
