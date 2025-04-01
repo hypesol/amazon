@@ -8,7 +8,7 @@ function PageHome() {
 
     useEffect(() => {
     // fetch('/data/coupons//all_coupons.json')
-    fetch('/data/coupons//tomtop.json')
+    fetch('/data/coupons/tomtop.json')
       .then((response) => {
         // console.log('Response:', response); // Log the response object
         return response.json();
