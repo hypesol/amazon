@@ -1,0 +1,47 @@
+[
+  {
+    "Merchant": "Carolina Forest Vacuum & Sewing",
+    "End Date": "NEVER",
+    "Title": "10% Off Miele Products over $550",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=907229&m=107678&u=233101",
+    "Category": "percent",
+    "Description": "10% Off Miele Products over $550",
+    "Coupon Code": "miele-10"
+  },
+  {
+    "Merchant": "Carolina Forest Vacuum & Sewing",
+    "End Date": "NEVER",
+    "Title": "$25 OFF Qualifying JUKI Sewing Machines",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=870476&m=107678&u=233101",
+    "Category": "fixed_product",
+    "Description": "$25 OFF Qualifying JUKI Sewing Machines",
+    "Coupon Code": "juki-25"
+  },
+  {
+    "Merchant": "Carolina Forest Vacuum & Sewing",
+    "End Date": "NEVER",
+    "Title": "$50 OFF Qualifying JUKI Sewing Machines",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=870475&m=107678&u=233101",
+    "Category": "fixed_product",
+    "Description": "$50 OFF Qualifying JUKI Sewing Machines",
+    "Coupon Code": "juki-50"
+  },
+  {
+    "Merchant": "Carolina Forest Vacuum & Sewing",
+    "End Date": "NEVER",
+    "Title": "Receive 5% off your next order at CarolinaForestVacuum.com! *NOTE : Not valid with any other promotion. Not valid on Industrial Machines, Dyson V10 Animal, Miele Homecare, Miele Jazz, Miele Twist, or Brother.",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=794226&m=107678&u=233101",
+    "Category": "percent",
+    "Description": "Receive 5% off your next order at CarolinaForestVacuum.com! *NOTE : Not valid with any other promotion. Not valid on Industrial Machines, Dyson V10 Animal, Miele Homecare, Miele Jazz, Miele Twist, or Brother.",
+    "Coupon Code": "sewcool"
+  },
+  {
+    "Merchant": "Carolina Forest Vacuum & Sewing",
+    "End Date": "NEVER",
+    "Title": "10% OFF select ",
+    "Tracking URL": "https://www.shareasale.com/u.cfm?d=875653&m=107678&u=233101",
+    "Category": "percent",
+    "Description": "10% OFF select ",
+    "Coupon Code": "brother-10-save-more"
+  }
+]
