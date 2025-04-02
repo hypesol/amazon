@@ -42,7 +42,7 @@ export default async function PageStore({ params }: { params: { slug: string } }
   const coupons = await getCoupons(params.slug);
 
   if (!coupons) {
-    return <div className="text-center text-red-500 py-10">No coupons found for "{params.slug}".</div>;
+    return <div className="text-center text-red-500 py-10">{`No coupons found for "${params.slug}".`}</div>;
   }
 
   return (
