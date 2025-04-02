@@ -3,17 +3,17 @@
 import React, { FC, useState } from "react";
 import CardCategory1 from "@/components/CardCategories/CardCategory1";
 import CardCategory4 from "@/components/CardCategories/CardCategory4";
-import CardCategory6 from "@/components/CardCategories/CardCategory6";
 import Heading from "@/components/Heading/Heading";
 import NavItem2 from "@/components/NavItem2";
 import Nav from "@/shared/Nav/Nav";
+import CardCategory6 from "@/components/CardCategories/CardCategory6";
 import { DEMO_MORE_EXPLORE_DATA, ExploreType } from "./data";
 
 export interface SectionGridMoreExploreProps {
   className?: string;
   gridClassName?: string;
   boxCard?: "box1" | "box4" | "box6";
-  data?: [];
+  data?: ExploreType[];
 }
 
 const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
@@ -24,32 +24,12 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
 }) => {
   const [tabActive, setTabActive] = useState("Man");
   const [currentPage, setCurrentPage] = useState(1);
-
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
   const itemsPerPage = 6; // Change as needed
 
-
-
-  // Get unique categories from the data
-  const categories = ["All", ...new Set(data.map((item) => item.Category))];
-
-  // Filter data based on search and category selection
-  const filteredData = data.filter((item) => {
-    const matchesSearch = item.Title.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === "All" || item.Category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-   // Reset page when filters change
-   React.useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory]);
-
   // Calculate the paginated data
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const totalPages = Math.ceil(data.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const paginatedData = filteredData.slice(startIndex, startIndex + itemsPerPage);
+  const paginatedData = data.slice(startIndex, startIndex + itemsPerPage);
 
 
   const renderCard = (item: any, index:any) => {
@@ -95,30 +75,28 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
     }
   };
 
-    // Pagination Controls
-    const renderPagination = () => {
-      if (totalPages <= 1) return null;
-      return (
-        <div className="flex justify-center mt-6 space-x-2">
-          <button
-            className={`px-4 py-2 rounded ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "bg-gray-800 text-white"}`}
-            disabled={currentPage === 1}
-            onClick={() => setCurrentPage((prev) => prev - 1)}
-          >
-            Prev
-          </button>
-          <span className="px-4 py-2">{`Page ${currentPage} of ${totalPages}`}</span>
-          <button
-            className={`px-4 py-2 rounded ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "bg-gray-800 text-white"}`}
-            disabled={currentPage === totalPages}
-            onClick={() => setCurrentPage((prev) => prev + 1)}
-          >
-            Next
-          </button>
-        </div>
-      );
-    };
-   
+   // Pagination Controls
+   const renderPagination = () => {
+    return (
+      <div className="flex justify-center mt-6 space-x-2">
+        <button
+          className={`px-4 py-2 rounded ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "bg-gray-800 text-white"}`}
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage((prev) => prev - 1)}
+        >
+          Prev
+        </button>
+        <span className="px-4 py-2">{`Page ${currentPage} of ${totalPages}`}</span>
+        <button
+          className={`px-4 py-2 rounded ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "bg-gray-800 text-white"}`}
+          disabled={currentPage === totalPages}
+          onClick={() => setCurrentPage((prev) => prev + 1)}
+        >
+          Next
+        </button>
+      </div>
+    );
+  };
 
   const renderHeading = () => {
     return (
@@ -214,47 +192,10 @@ const SectionGridMoreExplore: FC<SectionGridMoreExploreProps> = ({
 
   return (
     <div className={`nc-SectionGridMoreExplore relative ${className}`}>
-      {/* {renderHeading()} */}
-
-       {/* Search and Filter */}
-       <div className="flex justify-between items-center gap-4 mb-6">
-        {/* Search Box */}
-        <input
-          type="text"
-          placeholder="Search by title..."
-          className="p-2 border rounded-md w-5/6"
-          value={searchQuery}
-          onChange={(e) => {
-            setSearchQuery(e.target.value);
-            setCurrentPage(1); // Reset to first page when searching
-          }}
-        />
-
-        {/* Category Dropdown */}
-        <select
-          className="p-2 border rounded-md w-1/6"
-          value={selectedCategory}
-          onChange={(e) => {
-            setSelectedCategory(e.target.value);
-            setCurrentPage(1); // Reset to first page when filtering
-          }}
-        >
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-      </div>
-
-    {/* Render Data */}
-    <div className={`grid ${gridClassName} gap-6`}>
-        {paginatedData.length > 0 ? paginatedData.map(renderCard) : <p className="text-center">No results found.</p>}
-      </div>
-      
-      {/* <div className={`grid gap-4 md:gap-7 ${gridClassName}`}>
+      {renderHeading()}
+      <div className={`grid gap-4 md:gap-7 ${gridClassName}`}>
         {paginatedData.map((item, index) => renderCard(item, index))}
-      </div> */}
+      </div>
       {renderPagination()}
 
     </div>

@@ -3,6 +3,26 @@ import path from "path";
 import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
 import SectionGridMoreExplore from "@/components/SectionGridMoreExplore/SectionGridMoreExplore";
 
+
+// Generate static paths dynamically based on available JSON files
+// export async function generateStaticParams() {
+//   const directoryPath = path.join(process.cwd(), "public", "data", "coupons");
+  
+//   try {
+//     const files = fs.readdirSync(directoryPath); // Get all filenames in the directory
+//     const slugs = files
+//       .filter((file) => file.endsWith(".json")) // Only JSON files
+//       .map((file) => file.replace(".json", "")); // Remove `.json` extension to get slugs
+    
+//     return slugs.map((slug) => ({ slug }));
+//   } catch (error) {
+//     console.error("Error reading slugs from directory:", error);
+//     return []; // Return empty array if there's an issue
+//   }
+// }
+
+
+
 // Generate static paths for stores (Required for `output: export`)
 export async function generateStaticParams() {
   const slugs = ["amazon", "banggood", "tomtop"]; // Replace with actual store slugs
